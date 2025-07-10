@@ -3,7 +3,7 @@
 <br>
 
 # **Mix & Match: Brain Flip!**
-## *Description*
+## **Description**
 A three level matching game that challenges players memory, focus, and vocabulary. There are 3 levels, each level increases in difficulty - `starting with image-to-image`, then `word-to-word`, and finally `image-to-word matches`. 
 
 > Includes sound and accessibility features to enhance user experience.
@@ -61,8 +61,6 @@ If all tile pairs are matched:
 ```
 ## **Wireframe**
 > Click to view the [Wireframe](https://docs.google.com/document/d/1flJDGPS6NSvPXU3d418SveFGa79aLtH9sT6U-t2QPmo/edit?tab=t.0)
-
-<br>
 
 ## **Trello Board**
 > Click to view the [Trello Board](https://trello.com/invite/b/686f635c34610b048cbc9045/ATTI03b51c6fdbeab0e5167f4c098ef5810405EC98C4/alia-burashed-mix-and-match)
