@@ -273,27 +273,103 @@ width: 40px;
 
 /* card.html page */
 
-.front-face, .back-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: antiquewhite;
-}
-
-.memory-game {
-    border: 2px solid red;
-    width: 640px;
-    height: 640px;
+#bodyCard {
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.memory-card{
-    width: 25%;
-    height: 33.33%;
+.container2 {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #E8F0F7;
+    padding: 40px 60px;
+}
+
+#h2Card {
+    font-size: 3em;
+    color: #094b65;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reset {
+  display: inline;
+  margin: 0 auto;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #094b65;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.reset:focus {
+    color: #fff;
+    background: #4caf50;
+}
+
+
+.game {
+ /* 4 cards per row and each is 100px wide = 100px + 100px + 100px + 100px = 400px (card widths) */
+ /* 4 cards = 3 gaps each is 10px  so 3 gaps × 10px = 30px */
+ /* Total width = cards + gaps = 400 + 30 = 430px */
+ /* (430px) fits perfectly inside, and even leaves 5px padding on each side, */
+  width: 440px; 
+  height: 440px;
+  display: flex;
+  /* If there’s not enough space, let the items drop to the next line */
+  flex-wrap: wrap;  
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fcf5c7;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+}
+
+.item.flipCard {
+    transform: rotateY(0deg);
+}
+/* creates an extra invisble layer on top of the card */
+.item::after {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    background: #ffee93;
+    border-radius: 10px;
+    /* rotation of card  */
+    transition: transform 0.3s;
+    /* start facing forward (unflipped) */
+    transform: rotateY(0deg);
+    /* hidden the backdide of the card  */
+    backface-visibility: hidden;
+}
+
+.flipCard::after {
+    transform: rotateY(180deg);
 }
