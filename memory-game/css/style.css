@@ -366,6 +366,7 @@ width: 40px;
     transition: transform 0.3s;
     /* start facing forward (unflipped) */
     transform: rotateY(0deg);
+    opacity: 0.86;
     /* hidden the backdide of the card  */
     backface-visibility: hidden;
 }
@@ -373,3 +374,27 @@ width: 40px;
 .flipCard::after {
     transform: rotateY(180deg);
 }
+
+.win-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* centers the box and make it invisible */
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #fff;
+  border: 3px solid #094b65;
+  padding: 40px 60px;
+  border-radius: 20px;
+  font-size: 2rem;
+  color: #094b65;
+  font-family: 'Rancho', cursive;
+  /* make it appear above everything */
+  z-index: 999; 
+  transition: transform 0.5s ease-in-out;
+}
+
+.win-message.show {
+    /* make it pop up so put 1 */
+  transform: translate(-50%, -50%) scale(1);
+}
+
