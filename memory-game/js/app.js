@@ -71,6 +71,8 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 
             // checks if all cards are flipped using .length if yes, then all matches are found 
             if (flippedCards.length === allCards.length) {
+                clearInterval(timerInterval); // stop the timer immediately when user wins
+
                 setTimeout(() => {
                     document.getElementById('winMessage').classList.add('show'); // shows the message by adding a .show class to a hidden pop up 
 

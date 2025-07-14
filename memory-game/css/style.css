@@ -385,9 +385,8 @@ width: 40px;
   border: 3px solid #094b65;
   padding: 40px 60px;
   border-radius: 20px;
-  font-size: 2rem;
   color: #094b65;
-  font-family: 'Rancho', cursive;
+  font-family: 'Poppins', sans-serif;
   /* make it appear above everything */
   z-index: 999; 
   transition: transform 0.5s ease-in-out;
