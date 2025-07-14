@@ -375,7 +375,7 @@ width: 40px;
     transform: rotateY(180deg);
 }
 
-.win-message {
+.win-message{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -397,4 +397,60 @@ width: 40px;
     /* make it pop up so put 1 */
   transform: translate(-50%, -50%) scale(1);
 }
+
+.timer-bar {
+    /* full width of the screen */
+  width: 100%;
+  height: 20px;
+  background-color: #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, rgb(212, 22, 22) , rgb(214, 60, 29), #ff0058);
+  width: 100%;
+  /* width changes every 1s */
+  transition: width 1s linear; 
+}
+
+.lose-message {
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+  background: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  z-index: 999; 
+  color: #e74c3c;
+  animation: shake 0.83s infinite;
+}
+
+.lose-message.show {
+    /* make it show so put 1 */
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 

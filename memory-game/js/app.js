@@ -86,6 +86,7 @@ for (let i = 0; i < shuffledLetters.length; i++) {
                     const interval = setInterval(function () {
                         const timeLeft = animationEnd - Date.now();
 
+
                         if (timeLeft <= 0) {
                             return clearInterval(interval);
                         }
@@ -127,4 +128,44 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 }
 
 
+// timer logic setup 
+
+// set the time. ex: 120 seconds = 2 minutes
+const totalTime = 10;
+let currentTime = totalTime; // keeps track of the countdwown
+const progressBar = document.getElementById('progressBar'); // to update the width as the time passes 
+
+// starts the countdown (it runs every second)
+const timerInterval = setInterval(() => {
+    currentTime--; // reduces time by 1 sec
+
+    // It calculates how much time is left in percent
+    // then it changes the bar's width to match 
+    const percent = (currentTime / totalTime) * 100;
+    progressBar.style.width = percent + "%";
+
+    // when the time runs out 
+    if (currentTime === 0) {
+        clearInterval(timerInterval); // stop the timer
+        endGameMessage(); // show message
+    }
+}, 1000);
+
+// Show friendly "You lose" message
+function endGameMessage() {
+
+    const messageBox = document.createElement('div');
+    messageBox.className = 'lose-message';
+    messageBox.innerHTML = `
+    <h2>⏰ Time's Up!</h2>
+    <p>Great effort! Want to try again?</p>
+  `;
+  
+    document.body.appendChild(messageBox);
+
+    // Trigger .show after tiny delay so animation runs
+  setTimeout(() => {
+    messageBox.classList.add('show');
+  }, 300); 
+}
 
