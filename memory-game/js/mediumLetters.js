@@ -1,3 +1,5 @@
+document.querySelector('.containerM').style.display = 'flex';
+
 // define the card values
 const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"]
 
@@ -7,7 +9,7 @@ const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G"
 const shuffledLetters = letters.sort(() => Math.random() - 0.5);
 
 // find the class game and save it as the const varaiable so you can put cards inside later 
-const gameContainer = document.querySelector('.game');
+const gameContainer = document.querySelector('.mgame');
 
 // reset the selection after comparing the cards, so the next ones can be stored again 
 // If you don’t reset them, the program would keep comparing the same old cards
@@ -140,7 +142,6 @@ const timerInterval = setInterval(() => {
 
 // Show friendly "You lose" message
 function endGameMessage() {
-
     const messageBox = document.createElement('div');
     messageBox.className = 'lose-message';
     messageBox.innerHTML = `

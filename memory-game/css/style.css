@@ -225,9 +225,9 @@ h3 {
 
 .level-column {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
   padding: 20px;
 }
 
@@ -274,14 +274,13 @@ width: 40px;
 
 /* card.html page */
 
-#bodyCard {
+.bodyCard{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-
-.container2 {
+.containerE {
     position: relative;
     display: flex;
     justify-content: center;
@@ -290,6 +289,34 @@ width: 40px;
     gap: 30px;
     background: #E8F0F7;
     padding: 40px 60px;
+}
+
+.containerM {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #E8F0F7;
+    padding: 40px 60px;
+}
+
+.containerH{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #E8F0F7;
+    padding: 40px 60px;
+}
+
+.containerE,
+.containerM,
+.containerH {
+  display: none;
 }
 
 #h2Card {
@@ -320,14 +347,43 @@ width: 40px;
     background: #4caf50;
 }
 
-
-.game {
+#easy {
  /* 4 cards per row and each is 100px wide = 100px + 100px + 100px + 100px = 400px (card widths) */
  /* 4 cards = 3 gaps each is 10px  so 3 gaps × 10px = 30px */
  /* Total width = cards + gaps = 400 + 30 = 430px */
  /* (430px) fits perfectly inside, and even leaves 5px padding on each side, */
   width: 440px; 
   height: 440px;
+  display: flex;
+  /* If there’s not enough space, let the items drop to the next line */
+  flex-wrap: wrap;  
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#medium {
+ /* 4 cards per row and each is 100px wide = 100px + 100px + 100px + 100px = 400px (card widths) */
+ /* 4 cards = 3 gaps each is 10px  so 3 gaps × 10px = 30px */
+ /* Total width = cards + gaps = 400 + 30 = 430px */
+ /* (430px) fits perfectly inside, and even leaves 5px padding on each side, */
+  width: 440px; 
+  height: 440px;
+  display: flex;
+  /* If there’s not enough space, let the items drop to the next line */
+  flex-wrap: wrap;  
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#hard {
+ /* 4 cards per row and each is 100px wide = 100px + 100px + 100px + 100px = 400px (card widths) */
+ /* 4 cards = 3 gaps each is 10px  so 3 gaps × 10px = 30px */
+ /* Total width = cards + gaps = 400 + 30 = 430px */
+ /* (430px) fits perfectly inside, and even leaves 5px padding on each side, */
+  width: 660px; 
+  height: 660px;
   display: flex;
   /* If there’s not enough space, let the items drop to the next line */
   flex-wrap: wrap;  

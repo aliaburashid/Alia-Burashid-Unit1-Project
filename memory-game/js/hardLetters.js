@@ -1,13 +1,14 @@
-document.querySelector('.containerE').style.display = 'flex';
+document.querySelector('.containerH').style.display = 'flex';
 
-// Easy level only — always use 12 cards (6 pairs)
-const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F"];
+// Hard level only — always use 12 cards (6 pairs)
+const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H", "I", "I", "J", "J", "K", "K",
+    "L", "L", "M", "M", "N", "N", "O", "O"]
 
 
 const shuffledLetters = letters.sort(() => Math.random() - 0.5);
 
 
-const gameContainer = document.querySelector('.egame');
+const gameContainer = document.querySelector('.hgame');
 
 let firstCard = null;
 let secondCard = null;
@@ -86,7 +87,7 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 }
 
 // Timer logic
-const totalTime = 60; // Shorter time for easy level
+const totalTime = 240; // Longer time for hard level
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 
