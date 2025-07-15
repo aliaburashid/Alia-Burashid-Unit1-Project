@@ -18,7 +18,7 @@
         <button class="reset" onclick="window.location.reload();"> Reset Game</button>
     </div>
 
-     <div class="containerM">
+    <div class="containerM">
         <h2 id="h2Card">Memory Game</h2>
         <div class="mgame" id="medium"></div>
         <button class="reset" onclick="window.location.reload();"> Reset Game</button>
@@ -51,8 +51,20 @@
             script.src = `js/${level}${category}.js`;
 
             // adds the script to the page so that the file will run 
-            document.body.appendChild(script); 
+            document.body.appendChild(script);
         } 
+    </script>
+
+    <script>
+        const backButton = document.createElement('button');
+        backButton.textContent = 'Back';
+        backButton.className = 'back-button';
+        backButton.onclick = () => {
+            window.location.href = 'theme.html';
+        };
+
+        document.body.appendChild(backButton);
+
     </script>
 
 </body>
