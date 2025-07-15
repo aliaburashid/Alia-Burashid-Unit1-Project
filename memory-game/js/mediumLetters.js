@@ -1,18 +1,3 @@
-function selectCategory(element) {
-    // Remove 'selected' from all
-    document.querySelectorAll('.container').forEach(c => {
-        c.classList.remove('selected');
-    });
-
-    // Add to clicked container
-    element.classList.add('selected');
-
-    // Show the levels section
-    document.querySelector('.levels').style.display = 'block';
-}
-
-
-// cards.html
 // define the card values
 const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"]
 
@@ -71,7 +56,7 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 
             // checks if all cards are flipped using .length if yes, then all matches are found 
             if (flippedCards.length === allCards.length) {
-                clearInterval(timerInterval); // stop the timer immediately when user wins
+                clearInterval(timerInterval); // top the timer immediately when user wins
 
                 setTimeout(() => {
                     document.getElementById('winMessage').classList.add('show'); // shows the message by adding a .show class to a hidden pop up 

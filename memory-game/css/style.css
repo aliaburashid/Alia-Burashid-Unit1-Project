@@ -153,6 +153,7 @@ h3 {
     font-size: 70px;
     text-align: center;
     font-family: "Rancho", cursive;
+    
 }
 .themes {
   text-align: center;
@@ -254,22 +255,22 @@ h3 {
 width: 40px;
 }
 
-.checkmark {
-  display: none;
-  margin-left: 8px;
-  color: #4caf50;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.container.selected .checkmark {
-  display: inline;
-}
-
 .container.selected {
-  outline: 4px solid #4caf50;
-  border-radius: 25px;
+  border: 8px solid #4caf50;
+  /* change the shape to slightly */
+  transform: scale(1.05);
+  /* makes the change smooth */
+  transition: 0.3s;
 }
+
+.levels {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+
 
 /* card.html page */
 
@@ -451,5 +452,3 @@ width: 40px;
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-
-

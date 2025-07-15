@@ -26,6 +26,22 @@
         <h1> Yay! You Did It! </h1>
     </div>
 
+    <!-- Loads the correct game file based on what the user has selected -->
+    <script>
+        // gets the level and category from the browser's storage 
+        const level = localStorage.getItem('level');      // example: "medium"
+        const category = localStorage.getItem('category'); // example: "letters"
+
+        if (level && category) { //check if both values exists
+            const script = document.createElement('script'); // creates a script tag 
+
+            // sets the filename to both level and catefory like js/mediumLetters.js
+            script.src = `js/${level}${category}.js`;
+
+            // adds the script to the page so that the file will run 
+            document.body.appendChild(script); 
+        } 
+    </script>
 
 </body>
 
