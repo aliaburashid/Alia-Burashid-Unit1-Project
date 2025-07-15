@@ -1,23 +1,22 @@
-document.querySelector('.containerH').style.display = 'flex';
+document.querySelector('.containerM').style.display = 'flex';
 
 
-const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H", "I", "I", "J", "J", "K", "K",
-    "L", "L", "M", "M", "N", "N", "O", "O"]
+const numbers = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6", "7", "7", "8", "8",]
 
 
-const shuffledLetters = letters.sort(() => Math.random() - 0.5);
+const shuffledNumbers = numbers.sort(() => Math.random() - 0.5);
 
 
-const gameContainer = document.querySelector('.hgame');
+const gameContainer = document.querySelector('.mgame');
 
 let firstCard = null;
 let secondCard = null;
 let preventClick = false;
 
-for (let i = 0; i < shuffledLetters.length; i++) {
+for (let i = 0; i < shuffledNumbers.length; i++) {
     const card = document.createElement('div');
     card.className = 'item';
-    card.textContent = shuffledLetters[i];
+    card.textContent = shuffledNumbers[i];
 
     card.addEventListener('click', () => {
         if (preventClick || card.classList.contains('flipCard')) return;
@@ -87,7 +86,7 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 }
 
 // Timer logic
-const totalTime = 240; // Longer time for hard level
+const totalTime = 120; // Longer time for hard level
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 

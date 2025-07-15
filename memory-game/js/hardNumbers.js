@@ -1,11 +1,11 @@
 document.querySelector('.containerH').style.display = 'flex';
 
 
-const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H", "I", "I", "J", "J", "K", "K",
-    "L", "L", "M", "M", "N", "N", "O", "O"]
+const numbers = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6", "7", "7", "8", "8", "9", "9", "10", "10", "11", "11",
+    "12", "12", "13", "13", "14", "14", "15", "15"]
 
 
-const shuffledLetters = letters.sort(() => Math.random() - 0.5);
+const shuffledNumbers = numbers.sort(() => Math.random() - 0.5);
 
 
 const gameContainer = document.querySelector('.hgame');
@@ -14,10 +14,10 @@ let firstCard = null;
 let secondCard = null;
 let preventClick = false;
 
-for (let i = 0; i < shuffledLetters.length; i++) {
+for (let i = 0; i < shuffledNumbers.length; i++) {
     const card = document.createElement('div');
     card.className = 'item';
-    card.textContent = shuffledLetters[i];
+    card.textContent = shuffledNumbers[i];
 
     card.addEventListener('click', () => {
         if (preventClick || card.classList.contains('flipCard')) return;

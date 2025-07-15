@@ -1,6 +1,8 @@
 /* rest css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
 
 * {
     padding: 0;
@@ -348,14 +350,9 @@ width: 40px;
 }
 
 #easy {
- /* 4 cards per row and each is 100px wide = 100px + 100px + 100px + 100px = 400px (card widths) */
- /* 4 cards = 3 gaps each is 10px  so 3 gaps × 10px = 30px */
- /* Total width = cards + gaps = 400 + 30 = 430px */
- /* (430px) fits perfectly inside, and even leaves 5px padding on each side, */
   width: 440px; 
   height: 440px;
   display: flex;
-  /* If there’s not enough space, let the items drop to the next line */
   flex-wrap: wrap;  
   gap: 10px;
   margin-top: 20px;
@@ -378,14 +375,9 @@ width: 40px;
 }
 
 #hard {
- /* 4 cards per row and each is 100px wide = 100px + 100px + 100px + 100px = 400px (card widths) */
- /* 4 cards = 3 gaps each is 10px  so 3 gaps × 10px = 30px */
- /* Total width = cards + gaps = 400 + 30 = 430px */
- /* (430px) fits perfectly inside, and even leaves 5px padding on each side, */
   width: 660px; 
   height: 660px;
   display: flex;
-  /* If there’s not enough space, let the items drop to the next line */
   flex-wrap: wrap;  
   gap: 10px;
   margin-top: 20px;
@@ -407,6 +399,7 @@ width: 40px;
     font-weight: bold;
     transform: rotateY(180deg);
     transition: transform 0.3s;
+    font-family: "Winky Rough", sans-serif;
 }
 
 .item.flipCard {
