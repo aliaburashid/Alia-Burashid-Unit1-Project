@@ -9,7 +9,6 @@
   <title>Memory Game</title>
 
   <script>
-    
     // null to temporarily remember which category was selected 
     let chosenCategory = null;
 
@@ -22,8 +21,12 @@
 
       element.classList.add('selected');  // adds a border or effect to the clicked category
       chosenCategory = category;  // Store chosen category
-      document.querySelector('.levels').style.display = 'flex'; // reveal the hidden option 
       localStorage.setItem('category', category); // saves the category so the card.html can load it 
+
+      const title = document.getElementById('category-title');
+      title.classList.remove('start-position');
+      title.classList.add('top-position');
+      document.querySelector('.levels').style.display = 'flex'; // reveal the hidden option 
     }
 
     // function runs when the user clicks on a level
@@ -34,12 +37,13 @@
       window.location.href = 'cards.html';  // Redirect to card game page to start playing
     }
   </script>
+
 </head>
 
 <body>
 
   <Category class="themes">
-    <h3>Select Category</h3>
+    <h3 id="category-title" class="start-position">Select Category</h3>
 
     <div class="category-row">
       <div class="container" onclick="selectCategory(this, 'letters')">
@@ -92,6 +96,59 @@
       </div>
     </div>
   </section>
+
+  <img id="greetingSound" src="./assets/img/soundIcon.png" alt="" />
+
+  <div class="sound">
+    <h5>Click me!</h5>
+  </div>
+
+  <script>
+    const greeting = document.querySelector('#greetingSound')
+    const soundSays = new Audio('./assets/sounds/Category.mp3')
+
+    greeting.addEventListener("click", (evt) => {
+      soundSays.volume = .05
+      soundSays.play()
+    })
+
+    const letsPlay = document.querySelector('#btn')
+    const playBtn = new Audio('./assets/sounds/Back.mp3')
+
+    letsPlay.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      playBtn.volume = .05
+      playBtn.play()
+
+      setTimeout(() => {
+        window.location.href = 'theme.html';
+      }, 1000);
+    });
+  </script>
+
+  <script>
+    const backButton = document.createElement('button');
+    backButton.textContent = 'Back';
+    backButton.className = 'back-button';
+    backButton.style.marginLeft='650px'
+    backButton.style.marginTop="650px"
+
+    const back = new Audio('./assets/sounds/Back.mp3'); 
+
+    backButton.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      back.volume = 0.05;
+      back.play();
+
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000); // Delay navigation
+    });
+
+    document.body.appendChild(backButton);
+  </script>
+
+
 
 
 </body>

@@ -86,7 +86,7 @@ for (let i = 0; i < shuffledNumbers.length; i++) {
 }
 
 // Timer logic
-const totalTime = 120; // Longer time for hard level
+const totalTime = 90; 
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 

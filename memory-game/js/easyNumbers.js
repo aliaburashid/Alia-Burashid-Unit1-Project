@@ -85,7 +85,7 @@ for (let i = 0; i < shuffledNumbers.length; i++) {
 }
 
 
-const totalTime = 60; 
+const totalTime = 30; 
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 

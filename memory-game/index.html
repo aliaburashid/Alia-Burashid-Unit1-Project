@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./js/app.js"></script>
-    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/style.css">
     <title>Memory Game</title>
 </head>
+
 <body>
+
+    <div id="tsparticles"></div>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-bubbles@2/tsparticles.preset.bubbles.bundle.min.js">
+    </script>
+
     <header id="header">
         <a href="#" class="logo">Flip & Learn</a>
         <ul>
             <li><a href="#" class="active">Home</a></li>
             <li><a href="theme.html">Themes</a></li>
-            <li><a href="#">Levels</a></li>
+            <li><a href="#">How To Play</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </header>
@@ -26,5 +33,51 @@
         <a href="theme.html" id="btn">Lets play</a>
     </div>
 
+    <img id="greetingSound" src="./assets/img/soundIcon.png"
+        alt="A sound icon with: Yaaay! Let's flip and play! Match the cards and become super smart!" />
+
+    <div class="sound">
+        <h5>Click me!</h5>
+    </div>
+
+    <script>
+        const greeting = document.querySelector('#greetingSound')
+        const soundSays = new Audio('./assets/sounds/greeting.mp3')
+
+        greeting.addEventListener("click", (evt) => {
+            soundSays.volume = .05
+            soundSays.play()
+        })
+
+        const letsPlay = document.querySelector('#btn')
+        const playBtn = new Audio('./assets/sounds/Back.mp3')
+
+        letsPlay.addEventListener("click", (evt) => {
+            evt.preventDefault();
+            playBtn.volume = .05
+            playBtn.play()
+
+            setTimeout(() => {
+                window.location.href = 'theme.html';
+            }, 1000); //
+        });
+
+    </script>
+
+    <!-- script got from https://particles.js.org/docs/#md:fountain -->
+    <script>
+        (async () => {
+            await loadBubblesPreset(tsParticles); // load the "bubbles" preset
+
+            await tsParticles.load("tsparticles", {
+                preset: "bubbles",
+                fullScreen: { enable: false },
+            });
+        })();
+
+    </script>
+
+
 </body>
+
 </html>

@@ -87,7 +87,7 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 }
 
 // Timer logic
-const totalTime = 240; // Longer time for hard level
+const totalTime = 150; // Longer time for hard level
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 

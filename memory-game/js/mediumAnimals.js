@@ -85,7 +85,7 @@ for (let i = 0; i < shuffledAnimals.length; i++) {
 }
 
 // Timer logic
-const totalTime = 120; 
+const totalTime = 90; 
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 

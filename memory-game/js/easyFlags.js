@@ -1,21 +1,21 @@
-document.querySelector('.containerH').style.display = 'flex';
+document.querySelector('.containerE').style.display = 'flex';
 
-const animals = ["🐥", "🐥", "🦆", "🦆", "🦋", "🦋", "🐝", "🐝", "🐢", "🐢", "🦕", "🦕", "🐙", "🐙", "🐳", "🐳",
-    "🐠", "🐠", "🐪", "🐪", "🦓", "🦓", "🦧", "🦧", "🐞", "🐞", "🐺", "🐺", "🐼", "🐼"]
-
-const shuffledAnimals = animals.sort(() => Math.random() - 0.5);
+const flags = ["🇸🇦","🇸🇦","🇦🇪","🇦🇪","🇰🇼","🇰🇼","🇧🇭","🇧🇭","🇶🇦","🇶🇦","🇴🇲","🇴🇲"]
 
 
-const gameContainer = document.querySelector('.hgame');
+const shuffledFlag = flags.sort(() => Math.random() - 0.5);
+
+
+const gameContainer = document.querySelector('.egame');
 
 let firstCard = null;
 let secondCard = null;
 let preventClick = false;
 
-for (let i = 0; i < shuffledAnimals.length; i++) {
+for (let i = 0; i < shuffledFlag.length; i++) {
     const card = document.createElement('div');
     card.className = 'item';
-    card.textContent = shuffledAnimals[i];
+    card.textContent = shuffledFlag[i];
 
     card.addEventListener('click', () => {
         if (preventClick || card.classList.contains('flipCard')) return;
@@ -85,7 +85,7 @@ for (let i = 0; i < shuffledAnimals.length; i++) {
 }
 
 // Timer logic
-const totalTime = 150; // Longer time for hard level
+const totalTime = 30; 
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 

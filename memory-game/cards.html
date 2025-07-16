@@ -65,6 +65,19 @@
 
         document.body.appendChild(backButton);
 
+        const letsPlay = document.querySelector('#btn')
+        const playBtn = new Audio('./assets/sounds/Back.mp3')
+
+        letsPlay.addEventListener("click", (evt) => {
+            evt.preventDefault();
+            playBtn.volume = .05
+            playBtn.play()
+
+            setTimeout(() => {
+                window.location.href = 'theme.html';
+            }, 1000); 
+        });
+
     </script>
 
 </body>

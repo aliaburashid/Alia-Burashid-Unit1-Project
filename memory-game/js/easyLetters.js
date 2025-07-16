@@ -86,7 +86,7 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 }
 
 // Timer logic
-const totalTime = 60; // Shorter time for easy level
+const totalTime = 30; // Shorter time for easy level
 let currentTime = totalTime;
 const progressBar = document.getElementById('progressBar');
 

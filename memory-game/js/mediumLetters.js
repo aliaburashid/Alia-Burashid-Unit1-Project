@@ -120,7 +120,7 @@ for (let i = 0; i < shuffledLetters.length; i++) {
 // timer logic setup 
 
 // set the time. ex: 120 seconds = 2 minutes
-const totalTime = 120;
+const totalTime = 90;
 let currentTime = totalTime; // keeps track of the countdwown
 const progressBar = document.getElementById('progressBar'); // to update the width as the time passes 
 
