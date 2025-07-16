@@ -59,23 +59,18 @@
         const backButton = document.createElement('button');
         backButton.textContent = 'Back';
         backButton.className = 'back-button';
-        backButton.onclick = () => {
-            window.location.href = 'theme.html';
-        };
 
         document.body.appendChild(backButton);
+        const backSound = new Audio('./assets/sounds/Back.mp3');
 
-        const letsPlay = document.querySelector('#btn')
-        const playBtn = new Audio('./assets/sounds/Back.mp3')
-
-        letsPlay.addEventListener("click", (evt) => {
+        backButton.addEventListener("click", (evt) => {
             evt.preventDefault();
-            playBtn.volume = .05
-            playBtn.play()
+            backSound.volume = 0.3;
+            backSound.play();
 
             setTimeout(() => {
                 window.location.href = 'theme.html';
-            }, 1000); 
+            }, 800); 
         });
 
     </script>

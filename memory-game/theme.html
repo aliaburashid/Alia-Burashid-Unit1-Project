@@ -12,6 +12,16 @@
     // null to temporarily remember which category was selected 
     let chosenCategory = null;
 
+    // audio objects
+    const categorySounds = {
+      letters: new Audio('./assets/sounds/letters.mp3'),
+      numbers: new Audio('./assets/sounds/numbers.mp3'),
+      animals: new Audio('./assets/sounds/Animals.mp3'),
+      flags: new Audio('./assets/sounds/Flags.mp3'),
+    };
+
+    let currentlyPlaying = null; // to track the active sound 
+
     function selectCategory(element, category) { //category box and name 
       // Remove 'selected' and arrows
       document.querySelectorAll('.container').forEach(c => {
@@ -21,8 +31,20 @@
 
       element.classList.add('selected');  // adds a border or effect to the clicked category
       chosenCategory = category;  // Store chosen category
-      localStorage.setItem('category', category); // saves the category so the card.html can load it 
+      localStorage.setItem('category', category); // saves the category so the card.html can load it
 
+      if (currentlyPlaying && !currentlyPlaying.paused) {
+        currentlyPlaying.pause();
+        currentlyPlaying.currentTime = 0;
+      }
+
+      // Play the selected category sound
+      const sound = categorySounds[category];
+      if (sound) {
+        sound.volume = 0.3;
+        sound.play();
+        currentlyPlaying = sound;
+      }
       const title = document.getElementById('category-title');
       title.classList.remove('start-position');
       title.classList.add('top-position');
@@ -130,10 +152,10 @@
     const backButton = document.createElement('button');
     backButton.textContent = 'Back';
     backButton.className = 'back-button';
-    backButton.style.marginLeft='650px'
-    backButton.style.marginTop="650px"
+    backButton.style.marginLeft = '650px'
+    backButton.style.marginTop = "650px"
 
-    const back = new Audio('./assets/sounds/Back.mp3'); 
+    const back = new Audio('./assets/sounds/Back.mp3');
 
     backButton.addEventListener("click", (evt) => {
       evt.preventDefault();
