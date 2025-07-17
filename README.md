@@ -1,7 +1,5 @@
 # Alia-Burashid-Unit1-Project
 
-![Banner](./memory-game/assets/img/banner.png)
-
 # **Flip & Learn : Mix and Match**
 ## **Description**
 A fun and educational memory card game designed for kids! Players choose from exciting categories like `ABC letters`, `123 numbers`, `animals`, and `flags`. The game has `3 levels of difficulty` — the higher the level, the more cards to match. Each round helps improve memory, concentration, and pattern recognition in a playful way.
