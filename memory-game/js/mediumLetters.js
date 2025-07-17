@@ -4,7 +4,7 @@ document.querySelector('.containerM').style.display = 'flex';
 const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"]
 
 // commonly used trick to shuffle an array randomly 
-// Math.random gives a range between 0-1 do 0.5 is neutral 
+// Math.random gives a range between 0-1 and 0.5 is neutral 
 // .sort() compares each pair of items: + swap, -keep, 0 nothing 
 const shuffledLetters = letters.sort(() => Math.random() - 0.5);
 

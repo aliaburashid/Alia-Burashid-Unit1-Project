@@ -2,11 +2,7 @@ document.querySelector('.containerE').style.display = 'flex';
 
 // Easy level only — always use 12 cards (6 pairs)
 const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F"];
-
-
 const shuffledLetters = letters.sort(() => Math.random() - 0.5);
-
-
 const gameContainer = document.querySelector('.egame');
 
 let firstCard = null;
