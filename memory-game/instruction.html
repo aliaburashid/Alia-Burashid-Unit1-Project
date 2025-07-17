@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>How To Play - Memory Game </title>
+</head>
+<body>
+    <h1>How to Play</h1>
+
+  <div class="instructions">
+    <p>Train your memory with this classic memory game! Choose a difficulty level - the higher the level, the more cards to match.</p>
+
+    <h2>How to play:</h2>
+    <ul>
+      <li>Flip a card and try to find another with the same image.</li>
+      <li>If it's not a match, the cards will be flipped back.</li>
+      <li>Remember the images to more easily find pairs later.</li>
+      <li>When all pairs are found, you've won!</li>
+    </ul>
+  </div>
+
+  <script>
+        const backButton = document.createElement('button');
+        backButton.textContent = 'Back';
+        backButton.className = 'back-button';
+
+        document.body.appendChild(backButton);
+        const backSound = new Audio('./assets/sounds/Back.mp3');
+
+        backButton.addEventListener("click", (evt) => {
+            evt.preventDefault();
+            backSound.volume = 0.3;
+            backSound.play();
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 800);
+        });
+
+    </script>
+</body>
+</html>

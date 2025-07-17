@@ -620,3 +620,44 @@ header,
     margin-bottom: 5px;
     margin-left: 30px;
 }
+
+h1 {
+    color: #094b65;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: "Rancho", cursive;
+    font-size: 80px;
+}
+
+.instructions {
+    max-width: 700px;
+    height: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+}
+
+.instructions h2 {
+    color: #444;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructions ul {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
