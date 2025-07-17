@@ -49,34 +49,49 @@ A fun and educational memory card game designed for kids! Players choose from ex
 ## **Pseudocode**
 ```pseudocode
 // On Game Start
-Display level selection screen
-When a level is selected:
-    Load corresponding tile data
-    Shuffle the tiles
-    Render grid of tiles (face down)
+Get selected category and level from localStorage
+If Easy/Medium/Hard level is selected:
+    Show the matching container (e.g., .containerE)
+    Load matching card data for category
+    Shuffle cards randomly
+    Render cards face down on the grid
 
-// On Tile Click
-If this is the first tile flipped:
-    Store as firstSelection
-    Reveal tile visually
-Else if this is the second tile flipped:
-    Store as secondSelection
-    Reveal tile visually
-    Disable further clicks temporarily
+// On Card Click
+If clicks are allowed and card is not already flipped:
+    Flip the card
+    If this is the first flipped card:
+        Store as firstCard
+    Else if secondCard:
+        Store as secondCard
+        Prevent further clicks temporarily
 
-    If tiles match:
-        Keep both tiles revealed
-        Increment score or match count
-    Else:
-        Wait 1 second
-        Flip both tiles back
+        If cards match:
+            Keep both flipped
+            Reset selections
+            If all cards are matched:
+                Stop timer
+                Show win message
+                Trigger confetti
+        Else:
+            Wait 800ms
+            Flip both cards back
+            Reset selections
 
-    Reset selections
+// Timer Logic
+Start 30-second countdown (Easy level)
+Every second:
+    Decrease time
+    Update progress bar
+    If time is 0:
+        Stop game
+        Show "Time's Up!" message
 
-// Check for Win
-If all tile pairs are matched:
-    Display win screen/message
-    Option to replay or change level
+// Win or Lose
+If all cards matched:
+    Show “Yay! You Did It!”
+If time runs out:
+    Show “Time’s Up!” box
+
 ```
 ## **Wireframe**
 > Click to view the [Wireframe](https://docs.google.com/document/d/1flJDGPS6NSvPXU3d418SveFGa79aLtH9sT6U-t2QPmo/edit?tab=t.0)
