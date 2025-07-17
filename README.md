@@ -1,6 +1,6 @@
 # Alia-Burashid-Unit1-Project
 
-![Banner](assets/img/banner.png)
+![Banner](./assets/img/banner.png)
 
 # **Flip & Learn : Mix and Match**
 ## **Description**
@@ -82,10 +82,26 @@ If all tile pairs are matched:
 ```
 ## **Wireframe**
 > Click to view the [Wireframe](https://docs.google.com/document/d/1flJDGPS6NSvPXU3d418SveFGa79aLtH9sT6U-t2QPmo/edit?tab=t.0)
-
+> 
 ## **Trello Board**
 > Click to view the [Trello Board](https://trello.com/invite/b/686f635c34610b048cbc9045/ATTI03b51c6fdbeab0e5167f4c098ef5810405EC98C4/alia-burashed-mix-and-match)
+
+## **References:**
+1. Flaticon: (https://www.flaticon.com/search?word=sound%20icon&type=sticker)
+2. Kids color palettee (https://coolors.co/palettes/trending/kids)
+3. A child AI voice generator (https://artlist.io/voice-over/my-voiceovers)
+4. W3Schools (https://www.w3schools.com/)
+5. Game idea (https://www.helpfulgames.com/subjects/brain-training/memory.html)
+6. Confeeti code (https://confetti.js.org/)
+7. Bubbles code (https://particles.js.org/samples/presets/bubbles)
+
 ## **Future Enhancements**
-* Custom themes
+* Custom themes - Let kids choose fun themes
+* Progress tracking with badges or achievement milestones 
 * Best Score saving 
+* Improved mobile responsiveness
+* Full audio narration for instructions and feedback
+* Dark mode and accessibility options for colorblind users
+* Multiplayer mode for competitive play
+* background music once the game starts 
 
