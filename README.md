@@ -1,6 +1,7 @@
 # Alia-Burashid
 
 # **Flip & Learn : Mix and Match**
+
 ## **Description**
 A fun and educational memory card game designed for kids! Players choose from exciting categories like `ABC letters`, `123 numbers`, `animals`, and `flags`. The game has `3 levels of difficulty` — the higher the level, the more cards to match. Each round helps improve memory, concentration, and pattern recognition in a playful way.
 
@@ -46,53 +47,75 @@ A fun and educational memory card game designed for kids! Players choose from ex
 
 <br>
 
-## **Pseudocode**
-```pseudocode
-// On Game Start
-Get selected category and level from localStorage
-If Easy/Medium/Hard level is selected:
-    Show the matching container (e.g., .containerE)
-    Load matching card data for category
-    Shuffle cards randomly
-    Render cards face down on the grid
+## 🧠 Memory Game Logic (Medium Level)
 
-// On Card Click
-If clicks are allowed and card is not already flipped:
-    Flip the card
-    If this is the first flipped card:
-        Store as firstCard
-    Else if secondCard:
-        Store as secondCard
-        Prevent further clicks temporarily
+- When the game starts, the **Medium level board** becomes visible:
+  ```javascript
+  document.querySelector('.containerM').style.display = 'flex';
+  ```
 
-        If cards match:
-            Keep both flipped
-            Reset selections
-            If all cards are matched:
-                Stop timer
-                Show win message
-                Trigger confetti
-        Else:
-            Wait 800ms
-            Flip both cards back
-            Reset selections
+- A list of **16 cards (8 matching pairs)** is created and **shuffled**:
+  ```javascript
+  const letters = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"];
+  const shuffledLetters = letters.sort(() => Math.random() - 0.5);
+  ```
 
-// Timer Logic
-Start 30-second countdown (Easy level)
-Every second:
-    Decrease time
-    Update progress bar
-    If time is 0:
-        Stop game
-        Show "Time's Up!" message
+- Each shuffled letter is rendered as a **card (`div`)** and added to the board.
 
-// Win or Lose
-If all cards matched:
-    Show “Yay! You Did It!”
-If time runs out:
-    Show “Time’s Up!” box
+---
 
+## 🔄 Game Play Flow
+
+- When a player **clicks a card**:
+  - If it's the **first card**, we **store it**.
+  - If it's the **second card**:
+    - ✅ If it **matches** the first, both stay flipped.
+    - ❌ If not, both **flip back after a few sec**.
+
+- During this comparison, **clicking is disabled** using:
+  ```javascript
+  preventClick = true;
+  ```
+
+---
+
+## ⏱ Timer Logic
+
+- A **60-second countdown timer** runs and updates a **progress bar**:
+  ```javascript
+  const totalTime = 60;
+  ```
+
+- If the player matches **all pairs before time runs out**:
+  - The timer stops.
+  - A **"You Win"** message appears.
+  - **Confetti animation** is triggered.
+
+- If **time runs out first**:
+  - A **"Time’s Up"** message is shown.
+
+## 💾 How Category and Level Selection Works
+
+When a user selects a **category** (like `animals`) and a **level** (like `easy`), we use `localStorage` to save that choice in the browser — kind of like writing it on a sticky note.
+
+For example:
+```javascript
+localStorage.setItem('category', 'animals');
+localStorage.setItem('level', 'easy');
 ```
+
+Then, when the user goes to the **game page** (`cards.html`), we grab those saved values using:
+```javascript
+localStorage.getItem('category');
+localStorage.getItem('level');
+```
+
+We use those to load the correct JavaScript file, like:
+```javascript
+js/easyanimals.js
+```
+— which contains all the logic and cards for that combination.
+
 ## **Wireframe**
 > Click to view the [Wireframe](https://docs.google.com/document/d/1flJDGPS6NSvPXU3d418SveFGa79aLtH9sT6U-t2QPmo/edit?tab=t.0)
 > 
