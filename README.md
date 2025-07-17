@@ -1,31 +1,52 @@
 # Alia-Burashid-Unit1-Project
 
+![Banner](assets/img/banner.png)
+
+# **Flip & Learn : Mix and Match**
+## **Description**
+A fun and educational memory card game designed for kids! Players choose from exciting categories like `ABC letters`, `123 numbers`, `animals`, and `flags`. The game has `3 levels of difficulty` — the higher the level, the more cards to match. Each round helps improve memory, concentration, and pattern recognition in a playful way.
+
+> Includes cheerful sound effects and visual feedback like animations to keep players engaged.
 <br>
 
-# **Mix & Match: Brain Flip!**
-## **Description**
-A three level matching game that challenges players memory, focus, and vocabulary. There are 3 levels, each level increases in difficulty - `starting with image-to-image`, then `word-to-word`, and finally `image-to-word matches`. 
-
-> Includes sound and accessibility features to enhance user experience.
-
+## **Game Objectives**
+- Strengthen memory and focus through repeated image association
+- Encourage children to think ahead and form memory strategies
+- Provide a fun, playful experience that feels like learning through gameplay
 <br>
 
 ## **How to Get Started**
 1. Visit the [deployed site link here]
-2. Select a difficulty level
-3. Flip tiles to find matching pairs
-4. Try to match all pairs with as few moves and as little time as possible!
+2. Choose a category
+3. Select a difficulty level
+4. Flip the cards and try to match pairs before the timer runs out!
+
+<br>
 
 ## **Features**
-* Three unique difficulty levels
-* Keyboard navigation support
-* Visual + sound feedback
-* Probably a Confetti win animation
+* Four engaging categories: **Letters**, **Numbers**, **Animals**, **Flags**
+* Three difficulty levels: Easy (6 pairs), Medium (12 pairs), Hard (18 pairs)
+* Sound feedback when clicking buttons or selecting levels
+* Fun background visuals and interactive audio prompts
+* Confetti animation when the player wins
+* Responsive layout using Flexbox
+
+<br> 
+
+## **Accessibility Considerations**
+- Clickable sound icon for audio hints
+- Visual progress bar for time awareness
+- High contrast between text and backgrounds
+- Large clickable areas for smaller hands
+
+ <br>
 
 ## **Technologies Used**
-* HTML
-* CSS (Grid & Flexbox)
-* JavaScript (DOM, Arrays, Event Handling)
+* HTML5
+* CSS
+* JavaScript
+
+<br>
 
 ## **Pseudocode**
 ```pseudocode
