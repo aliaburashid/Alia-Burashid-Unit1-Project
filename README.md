@@ -1,6 +1,6 @@
 # Alia-Burashid-Unit1-Project
 
-![Banner](./assets/img/banner.png)
+![Banner](./memory-game/assets/img/banner.png)
 
 # **Flip & Learn : Mix and Match**
 ## **Description**
