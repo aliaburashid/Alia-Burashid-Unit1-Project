@@ -14,7 +14,7 @@ A fun and educational memory card game designed for kids! Players choose from ex
 <br>
 
 ## **How to Get Started**
-1. Visit the [deployed site link here]
+1. Visit the [deployed site link here](https://flipandlearn.surge.sh)
 2. Choose a category
 3. Select a difficulty level
 4. Flip the cards and try to match pairs before the timer runs out!
